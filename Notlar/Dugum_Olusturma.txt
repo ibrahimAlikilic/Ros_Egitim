@@ -1,0 +1,34 @@
+1) "ros2_ws/src/simple_py_pkg/simple_py_pkg" içerisine git
+2) .py uzantılı dosyanı oluştur
+3) "chmod +x .py_uzantılı_dosya" koduyla çalıştırılabilir dosya haline getir ( ls ile kontrol et dosya rengi yeşile dönüyor. )
+4) "cd ../.." ile src dizinine dön ve vs code çalıştır.
+5) oluşturduğun .py uzantılı dosyanın içine gir ve kodlamaya başla.
+
+6) kodları yazmaı bitirdikten sonra terminatur üzerinden .py uzantılı dosyanın olduğu dizine git.
+7) "./'.py uzantılı dosyanın adı'"
+8) ctrl+c ile durdurabilirsin.
+
+Şimdi buşekilde değil de node olarak davranarak çalışmasını sağlayacağız ve bu de dosyamıza isim atayarak bu isimli dosyayı çağırdığımda çalış şelinde olacak.
+1) "setup.py" dosyasına git
+2) "entry_points" kod satırına gel.
+3)        'console_scripts': [
+            "py_node = simple_py_pkg.simple_py_node:main"
+        ],
+        	py_node çağırıldığında :
+        		simple_py_pkg klasörünün içindeki simple_py_nod düğümüne git ve main methodunu çalıştır demiş oluyoruz. ( Koddaki if bloğunu gerçekleştirmiş olduyoruz.)
+        		
+4) ros2_ws dizinine git çünkü :
+	dosyalar üzerinde işlem yaptık ve bunu build etmemiz lazım .
+5) "colcon build --packages-select simple_py_pkg" ile "simple_py_pkg" paketini build et.
+7) install dizinini kontrol et build edilince orada bu dosyalar oluşmuş olmalı.
+8) bunun path'ini al ve terminator'de o dizine git ( Örn path : "/home/ibrahim/ros2_ws/install/simple_py_pkg/lib/simple_py_pkg")
+9) ardından "ls" ile kontrol et , yeşil renkte dosyamızı vermesi lazım , eğer veriyorsa sıkıntı yok demektir.
+
+10) ROS 2'de yeni bir paket oluşturduğunda veya colcon build ile derlediğinde, bu paketi ve onun yürütülebilir dosyalarını terminalin tanıyabilmesi için ortam değişkenlerini güncellemen gerekir. Bunun için :
+	terminator' de ros2_ws dosya dizinine geri döner ve "source ~/.bashrc" komutunu çalıştırırız.
+	Ve bu sayede tüm terminallerde çalışır hale gelmiş olur.
+11) Artık atamış olduğumuz isimle çağırabiliriz ( Yukarıda vermiş olduğumuz örnekte terminator'de /home/ibrahim/ros2_ws/install/simple_py_pkg/lib/simple_py_pkg dizinine gidip "./py_node" şeklinde çalıştırabilirim.
+
+Not : workspace dizininden (ros2_ws) çağırarak çalıştırmak için :
+	"ros2 run simple_py_pkg py_node " şeklinde komut satırı yazmalıyız. 
+ 
