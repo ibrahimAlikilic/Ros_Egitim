@@ -1,0 +1,15 @@
+1) Ana dizine gel.
+"mkdir ros2_ws" ile bu klasörü oluştur.ve içerisine git.
+"mkdir src" ile klasörünü oluştur.
+
+2) ros2_ws içerisindeyken "colcon build" ile build et.
+
+3) Oluşan setup.bash dosyasını bashrc içerisine gömmemiz lazım yoksa devamlı source etmemiz gerekir :
+"gedit ~/.bashrc" ile aç ve en sona "source ' dizin yolu'" şeklinde ekle.
+
+4) Çalışma alanı içerisinde paketimizi nasıl oluşturacağız :
+ros2_ws->src içerisinde bulunmalıyım.
+"ros2 pkg create -h" komutunu gir ve kullanılabilir olan komut argümanlarını gör.
+"ros2 pkg create simple_py_pkg --build-type ament_python --dependencies rclpy" ile oluştur . En sonda warningler veriyor onları dert etme.
+"colcon build" ile build et.
+
