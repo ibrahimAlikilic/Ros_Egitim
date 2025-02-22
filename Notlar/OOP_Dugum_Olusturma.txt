@@ -1,0 +1,5 @@
+1) /home/ibrahim/ros2_ws/src/simple_py_pkg/simple_py_pkg dizinine git.
+2) burada .py uzantılı dosyanı oluştur.
+3) "chmod +x template_node.py" ile çalıştırılabilir hale getiririm (ls ile dosya adının yeşile dönüp dönmediğini kontrol et).
+4) "./template_node.py" ile çalıştır bak bakalım hata felan var mı.
+5) Kodla.
