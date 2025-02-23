@@ -1,0 +1,17 @@
+1) "ros2_ws/src/simple_py_pkg/simple_py_pkg" dizinine git.
+2) ".py" uzantılı dosyanı oluştur.
+3) "chmod +x '.py uzantılı dosya.'" ile çalıştırılabilir dosya haline getir ( yeşil olup olmadığını kontrol et. ).
+4) "template_node.py" şablonunu kopyalayıp yeni dosyana yapıştır.
+5) Koddaki gerekli düzenlemeleri yap.
+6) Çalıştırılabilir dosya haline getirebilmek için "setup.py" dosyama eklemem lazım.
+7) terminator'de ros2_ws dizininde "colcon build --packages-select simple_py_pkg" ile simple_py_pkg paketini build et.
+8) "/ros2_ws/install/simple_py_pkg/lib/simple_py_pkg" dizinine gidip "./kaydettiğin_isim" ile çalıştrabilirsin.
+9) 8'da olduğunu gibi çalıştırmaktansa ros2_ws dizininde çalıştırmak bizim için daha uygundur bu da : "os2 run simple_py_pkg verdiğin_isim" şeklinde çalıştırabilirsin.
+
+Bu Derste Öğrenilen Düzen Bilgisi = Değişkenlerin sonunda "_" konur . Örn : counter_ *** Ve Python derslerini hatırla "self.counter_" şeklinde kullanıyoruz.
+Diğerim ki yukarıdaki 9 işlemi de gerçekleştiridkten sonra kodda bir değişiklik yaptın o zmn :
+1) "colcon build --packages-select simple_py_pkg --symlink-install" ilk başta build ederken bu şekilde build edersen bir dahaki seferlerde aşağıdaki işlemleri gerçekleştirmen yeterli 
+2) "ros2 run simple_py_pkg counter_node" komutunu girince paket bulunamadı diyebilir işte bu durumda bashrc üzerinden tanımlama gerçekleştirmen lazım.
+3) "source ~/.bashrc" dersin ve ardından tekraradan "ros2 run simple_py_pkg counter_node" komutunu çalıştırırsın.
+
+4) 1 ve 2'yi gerçekleştirdikten sonra yapmış olduğun tüm değişiklikler geçerli oluyor sadece "ros2 run simple_py_pkg counter_node" komutu ile çalıştırman yeterli. Ama yeni açtığın her terminalde ilk önce 3'ü gerçekleştirmen gerekebilir bazen 1 kere sourcing işlemi yeterli olmayabiliyor.
