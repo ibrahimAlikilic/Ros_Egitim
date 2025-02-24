@@ -1,0 +1,7 @@
+Mesela belirli 2 farklı sensörden gelen veriyi aynı node ile işlemem gerektiği durumlarda farklı isim ile çalıştırmak gerekebiliyor.
+"ros2 run simple_py_pkg counter_node --ros-args --remap __node:=yeni_isim" şeklinde yazarak yeni isimle node'yi çalıştırabilrisin
+Aynı anda hem isim değiştirip çalıştırdığımız hem isim değiştirmeden çalıştırdığımızı list ile kontrol edersek :
+	"ros2 node list" 
+		/counter_node
+		/yeni_isim
+çıktısını alırım ve warning almam.
