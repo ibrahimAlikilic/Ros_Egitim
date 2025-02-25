@@ -1,0 +1,5 @@
+1) Terminator üzerinden ros2_ws dizinine git ve turtlesim indirmek için "sudo apt install ros-humble-turtlesim" kodunu çalıştır.
+2) bashrc'ye kaynaklammaız lazım "source ~/.bashrc"
+3) "ros2 run  turtlesim turtlesim_node" komutuyla turtlesim paketi içerisindeki turtlesim_node uygulamamı çalıştırırım.
+4) "ros2 run turtlesim turtle_teleop_key" komutu sayesinde klavyeden alınan verilerle kaplumbağyı hareket ettirebiliyoruz.
+5) "rqt_graph" komutu Graph üzerinden olan biteni ayrıntılı inceleyebilirsin
