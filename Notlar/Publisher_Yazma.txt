@@ -1,0 +1,17 @@
+1) ros2_ws içerisine git ve visual studio code aç.
+2) "/home/ibrahim/ros2_ws/src/simple_py_pkg/simple_py_pkg" path'ine git ve ".py" uzantılı dosyanı oluştur.
+3) "chmod +x television.py " ile çalıştırılabilir  hale getirdim.
+4) Kodla
+5) Interface kavramına değiniyoruz o yüzden 5.1 kısmına git.
+6) setup.py içerisine işle.
+7) terminatörde ros2_ws dizinine gel
+8) "colcon build --packages-select simple_py_pkg --symlink-install" ile build et
+9) Normalde artık çalıştırma aşamasındayız lakin kodumuzda yeni bir bağımlılık (example_interfaces.msg) kullandık. Benim bu bağımlılığımı "package.xml" klasöründe "<depend>example_interfaces</depend>" eklerim.
+10) Yeni bağımlılık eklediğimiz için tekrardan build etmemiz lazım
+11) "ros2 run simple_py_pkg television_node" direk çalıştırdım ve oldu lakin öncesinde "source ~/.bashrc" etmemiz gerekebilir ileride unutma
+12) çalışır durumdayken terminalimi böldüm ve "ros2 node info /channel_node" komutu ile durumu inceledim ve görüldüğü gibi şu anda herhangi bir subscribers yok.
+13) "ros2 topic echo /channel_something" diyerek artık topic'ğimi dinliyorum. Lakin ben "ros2 node info /channel_node " çalıştırdım ve halen subscribers yok . İleriki derslerde subscribers olmayı da öğreneceğiz.
+
+
+5.1) ros2_ws dizinine git "ros2 interface show example_interfaces/msg/String" komutunu çalıştır
+5.2) bize yorum satırları ve "string data" döndürür bunun manası da eğer bunu kullanırsan string tipinde veri yayınlayacağım demek oluyor.
