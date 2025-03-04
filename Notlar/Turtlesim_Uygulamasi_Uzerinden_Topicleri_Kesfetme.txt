@@ -1,0 +1,6 @@
+1) Terminatör'ü aç ve "ros2 run turtlesim turtlesim_node" başlat.
+2) "ros2 run turtlesim turtle_teleop_key" ile klavye komutlarını aktif et.
+3) "ros2 interface show geometry_msgs/msg/Twist" ile robotumun koordinat düzleminde nereye nasıl gittiğini vektörel görebiliyorum. 
+4) "ros2 topic echo /turtle1/cmd_vel" komutu ile konumsal değişiklikleri takip edebiliyorum . Bana hız değerleri yayınlıyor.
+
+Not "ros2 node info /teleop_turtle" ile kullanılan şeyleri görnem gerekebilir komutu unutma
