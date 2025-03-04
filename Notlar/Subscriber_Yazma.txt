@@ -1,0 +1,9 @@
+1) "/ros2_ws/src/simple_py_pkg/simple_py_pkg" dizinine git
+2) .py uzantılı dosyanı oluştur.
+3) "chomd +x '.py_uzantılı_dosya'" ile çalıştırılabilir dosya haline getirelim
+4) düğümü yaz.
+5) "create_subscription()" parametrelerini girerken topic kısmını öğrenmek için "ros2 topic list" yazabilirsin ( Abone olacağım yayın açık olmalı ( ros2 run simple_py_pkg television_node ))
+6) Yazdığın düğümü setup.py içerisine işle
+7) ros2_ws dizinine gel "colcon build --packages-select simple_py_pkg --symlink-install" ile build et.
+8) terminalden "/ros2_ws/install/simple_py_pkg/lib/simple_py_pkg" yani nodelerin olduğu dizine gel ve bashrc'yi source et "source ~/.bashrc"
+9) "./subscriber_node_adım" ile aboneliği gerçekleştir.
