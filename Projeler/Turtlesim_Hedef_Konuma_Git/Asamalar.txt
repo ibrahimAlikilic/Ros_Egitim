@@ -1,0 +1,29 @@
+Paketleri ve çalışma alanını oluşturma :
+1) Projeyi gerçekleştireceğin dizine git ve "mkdir turtlesim_ws" komutuylla çalışma alanı klasörünü oluştur.
+2) turtlesim_ws dizinine git ve "src" klasörünü oluştur.
+3) Artık turtlesim_ws dizinine dizininde projemizi build etmemiz lazım : "colcon build"
+4) şimdi projemizi ubuntuya bildirmemiz gerekiyor bu da oluşan install klasörü içerisindeki setup.bash sayesinde gerçekleşecek. Bunu bashrc içerisine göeceğiz ve bu sayede her terminalde projemiz çalışacak.
+5) "gedit ~/.bashrc" ile bashrc'yi aç ve dizini source et.
+! 6) şimdi bashrc'yi source etmemiz lazım "source ~/.bashrc" komutunu çalıştır. Her terminal açtığında bu işlemi gerçekleştir.
+7) Sıra kontrol algortimalarımızı oluşturacağımız paketleri oluşturmaya geldi
+8) src dizinine git.
+9) "ros2 pkg create turtlesim_py_pkg --build-type ament_python --dependencies rclpy" komutuyla paketlerimi oluştururum. "ros2 pkg create -h" ile neyin ne olduğunu görebiliyorsun.
+10) "/Ros_Egitim/Projeler/Turtlesim_Hedef_Konuma_Git/turtlesim_ws" dizinine dön.
+11) Yeni paket oluşturduk o yüzden çalışmamızı tekrardan build etmemiz lazım "colcon build"
+
+Uygulama Analizi :
+1) /Ros_Egitim/Projeler/Turtlesim_Hedef_Konuma_Git/turtlesim_ws dizininde turtlesim uygulamasını başlat "ros2 run turtlesim turtlesim_node"
+2) Terminali böl.
+3) şimdir robotumuzu hareket ettirebilmek için robotumuza bazı değerler göndermemiz lazım.
+4) "ros2 run turtlesim turtle_teleop_key" ile klavye tuşları ile kontrolü aktive edelim
+5) teminali tekrardan böl ve "ros2 node list" komutuyla aktif nodelerini gör. Veya "rqt" komutu ile de görüntüleyebilirsin.
+6) Karşımıza çıkan diagramda cmd_vel robotumuzun hareketlerini tanımlıyor yani biz kendi cmd_vel değerlerimizi tanımlayarak robotumuzu hareket ettirebiliriz.
+7) "ros2 node info /turtlesim" komutu ile subscribers görelim.
+8) "ros2 node info /teleop_turtle" komutu ile publish'i görelim.
+9) yani biz teleop_turtle ile yayın yapıyoruz ( hareket ) ve turtlesim buraya abone.
+10) "ros2 topic list" ile topic'leri gör bizim şu an ilgilendiğimiz : /turtle1/cmd_vel
+11) "ros2 topic echo /turtle1/cmd_vel" komtu ile topic'iğimi dinlerim.
+12) görüyoruz ki sağ ya da sola dönmelerde 'z' ileri geri işlemlerinde 'x' değeri değişiyor.
+13) "ros2 node info /teleop_turtle" komutu ile görüyoruz ki değerlerimizi 'geometry_msgs/msg/Twist' arayğzğnden yayınlıyoruz.
+14) "ros2 interface show geometry_msgs/msg/Twist" komutu ile bu dosya ile ilgili bilgileri görebiliri. Ve çıktıdan anlıyoruz ki float64 veri tipinde değerler yayınlamam lazım.
+
