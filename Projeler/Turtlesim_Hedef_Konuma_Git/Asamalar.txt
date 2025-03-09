@@ -27,3 +27,20 @@ Uygulama Analizi :
 13) "ros2 node info /teleop_turtle" komutu ile görüyoruz ki değerlerimizi 'geometry_msgs/msg/Twist' arayğzğnden yayınlıyoruz.
 14) "ros2 interface show geometry_msgs/msg/Twist" komutu ile bu dosya ile ilgili bilgileri görebiliri. Ve çıktıdan anlıyoruz ki float64 veri tipinde değerler yayınlamam lazım.
 
+Kendi yayıncı düğümümüzü oluşturarak linner ve açısal hız değerlerini yayınlayacağız :
+1) src dizininde "code ." ile vsual code'u aç.
+2) terminatörde "/Ros_Egitim/Projeler/Turtlesim_Hedef_Konuma_Git/turtlesim_ws/src/turtlesim_py_pkg/turtlesim_py_pkg" dizinine git ve "vel_controller.py" script'ini oluştur.
+3) "chmod +x vel_controller.py" ile çalıştırılabilir dosya haline getir.
+4) vs code gel ve "setup.py" içerisine işle. ("vel_controller = turtlesim_py_pkg.vel_controller:main")
+5) vel_controller.py içerisine önceden oluşturmuş olduğumuz template'i yapıştır ardından gerekli kod düzenlemelerini gerçekleştir.
+6) build işlemini gerçekleştir (turtlesim_ws dizinine dön) : "colcon build --symlink-install" .
+7) source et : "source ~/.bashrc" .
+8) "ros2 run turtlesim_py_pkg vel_controller" ile çalıştırılabilirliğini test edebilirsin.
+Belirli bir topic üzerinden açısal ve doğrusal hız değerleri yayınlama :
+9) Kodlama ( Publisher oluşturma.)
+10) Turtlesim node'unu çalıştır  : ros2 run turtlesim turtlesim_node
+11) "ros2 run turtlesim_py_pkg vel_controller " ile node'yi çağır ve publis işlemi başlasın . Robotu izle kodlamış olduğumuz gibi çember çiziyor.
+12) "ros2 topic echo /turtle1/cmd_vel " ile yayınlanan değerleri dinleyebiliriz.
+Kodu kendin değerler atayacak hale getirdikten sonra :
+13) "ros2 run turtlesim_py_pkg vel_controller " ile çalıştır
+14) "ros2 run turtlesim_py_pkg vel_controller 1 0.5" ile değerlerini de atayarak çalıştır.
