@@ -44,3 +44,26 @@ Belirli bir topic üzerinden açısal ve doğrusal hız değerleri yayınlama :
 Kodu kendin değerler atayacak hale getirdikten sonra :
 13) "ros2 run turtlesim_py_pkg vel_controller " ile çalıştır
 14) "ros2 run turtlesim_py_pkg vel_controller 1 0.5" ile değerlerini de atayarak çalıştır.
+
+Robotumuzu  herhangi bir hedef noktaya gönderme :
+1) Öncelikle yeni bir script oluşturmamız lazım ( "/Ros_Egitim/Projeler/Turtlesim_Hedef_Konuma_Git/turtlesim_ws/src/turtlesim_py_pkg/turtlesim_py_pkg" dizininde oluşturuyoruz.) : nano "go_to_loc.py" 
+2) Çalıştırılabilir hale getirelim : "chmod +x nano go_to_loc.py"
+3) Kodla
+4) setup.py içerisine işle.
+5) build edelim ( "/Ros_Egitim/Projeler/Turtlesim_Hedef_Konuma_Git/turtlesim_ws" dizininde ): colcon build --symlink-install
+6) "ros2 run turtlesim_py_pkg go_to_loc" ile düğümün çalışıp çalışmadığını test et.
+7) Kodla
+8) Terminalde "ros2 topic echo /turtle1/pose" ile turtlemin konumunu öğrenirim ("ros2 run turtlesim turtlesim_node" ile turtlesi'i çalıştırmış  olman lazım.)("ros2 topic list" ile bak önceki parantezde demek istediğini anlarsın.). Theta değeri baktığı yönü açısal olarak belirtir. Matematikte olduğu gibi saat yönünün tersine değerler işliyor.
+
+Örnek :
+* +1 radyan/s → Saat yönünün tersine dönme
+* -1 radyan/s → Saat yönünde dönme
+* −𝜋 (~-3.14 radyan) → 180° dönme
+* 𝜋(~3.14 radyan) → Ters yöne 180° dönme
+* −2 radyan →Yaklaşık -114.6° dönme (-2 X 180/𝜋)
+
+9) Ben bu aşamanın yukarıdaki işlemlerinde neden source etmediğimize takılmıştım ve source gereksinim notlarını yazmıştım , projei anltan hoca da şimdi source yaptı.
+10) "ros2 run turtlesim turtlesim_node" ile turtlesim başlattım . Ardından "ros2 run turtlesim_py_pkg go_to_loc" ile yazmış olduğum düğümü başlatıyorum .
+11) Kullanıcıdan değer alacak şekilde methodumuzu değiştirdik bu yüzden "ros2 run turtlesim_py_pkg go_to_loc 1 3" gibi sonuna değerler ekleyerek gerçekleştiriyorum.
+
+Not : Denedim ve fark ettim ki burada koordinat sisteminin (0,0) noktası sol en alt.
