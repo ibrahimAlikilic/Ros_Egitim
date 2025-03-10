@@ -1,0 +1,51 @@
+Burada açıklamalarda referans alınan klasörler "Turtlesim_Hedef_Konuma_Git" projesinin klasörleridir.
+
+ROS 2’de `source` komutunu çalıştırmanın amacı, oluşturduğun (`build`) ve yüklediğin (`install`) paketlerin ortam değişkenlerine eklenmesini sağlamak. Ancak, her durumda `source` etmen gerekmiyor. Şimdi bunu detaylandıralım:
+
+---
+
+### **Ne Zaman `source` Etmeliyim?**
+1. **Yeni bir terminal açtığında**  
+   - `.bashrc` içinde `source ~/turtlesim_ws/install/setup.bash` eklediysen, terminali her açtığında otomatik olarak bu işlem yapılır. Eğer eklemediysen, her yeni terminalde elle `source` etmelisin.
+
+2. **İlk defa `colcon build` çalıştırdıktan sonra**  
+   - Yeni bir paket veya düğüm oluşturup `colcon build` çalıştırdığında, bu yeni oluşturulanları sistemine tanıtmak için `source install/setup.bash` (veya `.bashrc` içindeki yolu) çalıştırmalısın.  
+   - Eğer `source` etmezsen, yeni düğümün (`ros2 run turtlesim_py_pkg vel_controller`) terminalde bulunamaz.
+
+3. **Mevcut paketlerin `setup.py` veya `CMakeLists.txt` dosyalarında değişiklik yaptıysan**  
+   - `setup.py` içine bir şey eklediğinde, bu değişiklikleri tanıtmak için `colcon build` çalıştırman gerekir.  
+   - Ancak, her `setup.py` değişikliğinden sonra `source` çalıştırman gerekmez. Çünkü, `colcon build` sonrası güncellenmiş dosyalar `install` dizinine yerleştirilir ve `.bashrc` içinde `source` zaten aktifse, terminali kapatıp açmadan değişiklikler etkili olur.
+
+---
+
+### **Örnekler Üzerinden Açıklama**
+#### **Vel Controller Script'inde Neden `source` Ettik?**
+```bash
+6) build işlemini gerçekleştir (turtlesim_ws dizinine dön) : "colcon build --symlink-install"
+7) source et : "source ~/.bashrc"
+```
+- Burada yeni bir `vel_controller.py` düğümü oluşturduk.
+- `colcon build` yaptıktan sonra, bu yeni oluşturulan `vel_controller` komutunu kullanabilmek için ortam değişkenlerini güncellemek zorundaydık.
+- Eğer `source` etmezsen, terminal eski bilgileri kullanır ve yeni düğümün (`ros2 run turtlesim_py_pkg vel_controller`) bulunamaz.
+
+---
+
+#### **Go To Location Script'inde Neden `source` Etmedik?**
+```bash
+4) setup.py içerisine işle.
+5) build edelim ("/Ros_Egitim/Projeler/Turtlesim_Hedef_Konuma_Git/turtlesim_ws" dizininde ): colcon build --symlink-install
+6) "ros2 run turtlesim_py_pkg go_to_loc" ile düğümün çalışıp çalışmadığını test et.
+```
+- Burada yeni bir `go_to_loc.py` dosyası oluşturduk, ancak daha önce `turtlesim_py_pkg` zaten oluşturulmuştu.
+- `setup.py` içine sadece ekleme yaptığımız için, `colcon build` sonrası yeni `go_to_loc.py` script'i zaten mevcut olan ortam değişkenleri tarafından tanınır.
+- Eğer terminal kapatılmamışsa ve hala önceki `source` işlemi geçerliyse, tekrar `source` etmeye gerek kalmaz.
+- Ancak, terminali kapatıp yeniden açarsan veya farklı bir terminalde çalışıyorsan, `source` etmen gerekir.
+
+---
+
+### **Genel Kural Olarak**
+✅ **Yeni bir terminal açtıysan** veya `colcon build` sonrası yeni düğümleri çalıştırırken sorun yaşıyorsan `source install/setup.bash` yapmalısın.  
+✅ **Yeni bir paket eklediysen** veya yeni bir `setup.py` girdisi oluşturduysan, `source` yapmadan önce `colcon build` zorunludur.  
+✅ **Mevcut bir pakete sadece yeni bir düğüm (`.py` dosyası) eklediysen**, önceki `source` işlemi geçerli olduğu sürece tekrar `source` yapmaya gerek yoktur.
+
+Bu mantıkla ilerlersen, ROS 2'de `source` kullanımını daha iyi anlayıp gerektiğinde kullanabilirsin. 🚀
