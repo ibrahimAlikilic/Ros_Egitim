@@ -1,0 +1,5 @@
+1) "/opt/ros/humble/share/urdf_tutorial/urdf" dizinine git.
+	ls ile kontrol et başlatabileceğin paketleri göreceksin.
+2) "ros2 launch urdf_tutorial display.launch.py model:=01-myfirst.urdf " şekline komut girersen hata alırsın ve hata "No such file or directory" bu yüzden yolu ile beraber girmelisin
+	"ros2 launch urdf_tutorial display.launch.py model:=/opt/ros/humble/share/urdf_tutorial/urdf/01-myfirst.urdf"
+

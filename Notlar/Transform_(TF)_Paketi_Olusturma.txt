@@ -1,0 +1,3 @@
+1) "sudo apt install ros-humble-urdf-tutorial" komutu ile urdf dosyalarunu indiriyoruz .
+2) Yeni paket indirdik soruce işlemi gerçekleştirmeliyiz.
+3) Öncelikle "gedit .bashrc" ile bir kontrol edelim . İçerisinde "source /opt/ros/humble/setup.bash" var o yüzden sadece "sorce .bashrc" komutu source işlemi için yeterli.
