@@ -1,12 +1,27 @@
 <?xml version="1.0" ?>
 <robot name="simple_robot">
+    
+    <!-- Şekillere renk ayarı için material etiketi. -->
+    
+    <material name="red"> <!-- Zaten default tanımlı olan kırmızı ama ben gene de bunu da yazdım. -->
+        <color rgba="1 0 0 1"/> <!-- a yani alpha değeri matlık manasına geliyor 1 mat oluyor. -->
+    </material>
+    
+    <material name="blue">
+        <color rgba="0 0 1 1"/> <!-- a yani alpha değeri matlık manasına geliyor 1 mat oluyor. -->
+    </material>
+
+    <material name="green">
+        <color rgba="0 1 0 1"/> <!-- a yani alpha değeri matlık manasına geliyor 1 mat oluyor. -->
+    </material>
+    
     <link name="base_link">
         <visual>
-            <geometry>
-                <box size="0.5 0.5 1"/>
+            <geometry> 
+                <box size="0.5 0.5 0.5"/> <!-- Sırayla x,y,z değerleri alıyor. --> <!-- Yazdığımız değerler metre cinsinden. -->
             </geometry>
             <origin xyz="0 0 0" rpy="0 0 0"/> <!-- Nesnenin başlangıç konumu ve dönüşü (radyan cinsinden) belirtiyor. --> <!-- Şeklimin merkezi belirtmiş olduğum koordinatta olur.-->
-            
+            <material name="blue" /> <!-- Oluşturmuş olduğum amterial etiketini çağırdım ve istediğim cismime uygulattım. Ve sondaki "/" ile açtığımız tagı kapatmış da olduk. -->
         </visual>
     </link>
 </robot>
