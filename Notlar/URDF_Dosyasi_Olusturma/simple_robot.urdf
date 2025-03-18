@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<robot name="simple_robot">
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <box size="0.5 0.5 1"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/> <!-- Nesnenin başlangıç konumu ve dönüşü (radyan cinsinden) belirtiyor. --> <!-- Şeklimin merkezi belirtmiş olduğum koordinatta olur.-->
+            
+        </visual>
+    </link>
+</robot>
