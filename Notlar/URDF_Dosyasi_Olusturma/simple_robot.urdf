@@ -15,13 +15,48 @@
         <color rgba="0 1 0 1"/> <!-- a yani alpha değeri matlık manasına geliyor 1 mat oluyor. -->
     </material>
     
+    <material name="grey">
+        <color rgba="0.5 0.5 0.5 1"/> 
+    </material>
+
+    <material name="random_color">
+        <color rgba=".3 0.7 0.1 1"/> 
+    </material>
+
     <link name="base_link">
         <visual>
             <geometry> 
                 <box size="0.5 0.5 0.5"/> <!-- Sırayla x,y,z değerleri alıyor. --> <!-- Yazdığımız değerler metre cinsinden. -->
             </geometry>
-            <origin xyz="0 0 0" rpy="0 0 0"/> <!-- Nesnenin başlangıç konumu ve dönüşü (radyan cinsinden) belirtiyor. --> <!-- Şeklimin merkezi belirtmiş olduğum koordinatta olur.-->
-            <material name="blue" /> <!-- Oluşturmuş olduğum amterial etiketini çağırdım ve istediğim cismime uygulattım. Ve sondaki "/" ile açtığımız tagı kapatmış da olduk. -->
+            <origin xyz="0 0 0" rpy="0 0 0"/> <!-- Nesnenin başlangıç konumu (xyz) ve dönüşü açısını(rpy)(radyan cinsinden) belirtiyor. --> <!-- Şeklimin merkezi belirtmiş olduğum koordinatta olur.-->
+            <material name="random_color" /> <!-- Oluşturmuş olduğum amterial etiketini çağırdım ve istediğim cismime uygulattım. Ve sondaki "/" ile açtığımız tagı kapatmış da olduk. -->
         </visual>
     </link>
+
+    <!-- Yeni link-->
+    <link name="second_link">
+        <visual>
+            <geometry>
+                <cylinder radius="0.25" length="0.15"/>
+            </geometry>
+            <origin xyz="2 0 0" rpy="0 0 0"/> <!-- burada girdiğim koordinat değerleri cismimin koordinatlaro ; aşağıda girdiğim değerlerse TF'imin koordinatları-->
+            <material name="grey"/>
+        </visual>
+    </link>
+
+    <joint name="bazse_second_joint" type="fixed"> <!-- Linklerim arasında ilişki kurmamı sağlayan etiketim.--> <!--"http://wiki.ros.org/urdf/XML/joint" buradan bağlantı şekilleri (type) ile ilgili bilgileri öğrenebilirsin.-->
+        <parent link="base_link"/>
+        <child link="second_link"/>
+        <origin xyz="0.5 0 0" rpy="0 0 0"/> <!-- xyz girdiğim değerin base koordinatını 000 kabul ederek olacağı konumdur. .-->
+        <!-- Dikkatli incelersen xyz koordinat TF çubuklarını göreceksin.-->        
+    </joint>
+
+    <!--
+    Anladığım kadarıyla mantık :
+    base_link her zaman merkezde oluşturulur ve TF kaydırmaları için merkezi referans alarak <jonit> yazarsın. Diğer türlü origin içine yazdığın koordinat değerleri cismi hareket ettirir.
+    -->
+    <!--
+    Not : Yazılan tüm uzunluk değerleri metre cinsinden.
+    Not : Bazı bağlantı şekillerinde "axis" veriyoruz ve burada "axis="1 0 0"" demek yalnızca x ekseni etrafında dönmesine izin veriyorum demek. 
+    -->
 </robot>

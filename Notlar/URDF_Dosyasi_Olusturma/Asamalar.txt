@@ -1,3 +1,6 @@
 1) oluşşturmak istediğin dizininde ".urdf" uzantılı dosyanı oluştur : nano simple_robot.urdf
 2) code ile ".urdf" uzantılı dosyanın içine gir , kodla
 3)"ros2 launch urdf_tutorial display.launch.py model:=/home/ibrahim/Ros_Egitim/Notlar/URDF_Dosyasi_Olusturma/simple_robot.urdf" "urdf_tutorial display.launch.py" kısmı urdf_tutorial içindeki "display.launch.py" başlatma dosyası aracılığıyla başlatıyorum. Model kısmında tam adresi girmeyi unutma ve path'i "pwd" ile al sonra sıkıntı çıkabiliyor.
+
+"process has died" hatası:
+Diyelim ki iki tane link oluşturdun bu durumda bunlar arasında ilişki olmalı yoksa hata alırsın.
