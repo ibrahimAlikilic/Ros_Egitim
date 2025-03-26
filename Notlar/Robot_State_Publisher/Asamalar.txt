@@ -1,0 +1,3 @@
+1) Önceden yazmış olduğumuz urdf dosyasını çalıştır : "ros2 launch urdf_tutorial display.launch.py model:=/home/ibrahim/Ros_Egitim/Notlar/URDF_Dosyasi_Olusturma/simple_robot.urdf"
+2) elimizdeki TF'leri görmek için bir dosyaya kaydedelim : "ros2 run tf2_tools view_frames -o simple_robot" simple_robot.pdf oluşmuş oldu ( ana dizindeyiz )
+
