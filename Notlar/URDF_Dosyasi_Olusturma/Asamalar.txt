@@ -4,3 +4,20 @@
 
 "process has died" hatası:
 Diyelim ki iki tane link oluşturdun bu durumda bunlar arasında ilişki olmalı yoksa hata alırsın.
+
+
+
+************************
+
+Kendi URDF dosyamızı ros2 paketini kullanmadan teminal üzerinden başlatma ( urdf_tutorial paketini kullanmadan )
+1)  "ros2 run robot_state_publisher robot_state_publisher --ros-args -p robot_description:="$(xacro /home/ibrahim/Ros_Egitim/Notlar/URDF_Dosyasi_Olusturma/simple_robot.urdf)"
+Not : Eğer urdf dosyanın içerisinde <!-- --> şeklinde belirtilmiş yorum satırları varsa çalışmıyor , hata veriyor.
+2) join_state publisher'ı da başlatmamız lazım ( hani eklemleri döndürmek için açılan bar var ya o işte ) : "ros2 run joint_state_publisher_gui joint_state_publisher_gui"
+Kontrol : "ros2 node list" de ikisinin de başladığını göreceksin. "rqt_graph" ile de kontrol edebilirsin.
+3) rviz ekranımız eksik onu da başlatalım : "ros2 run rviz2 rviz2"
+Açılınca : 
+	3.1) Fixed Frame i seç
+	3.2) Add kısmından robot Model ve TF ekle
+	3.3) Description Topic ( Robot Model içinde ) seç
+4) Belirleyeceğimiz base noktaya göre hareket gerçekşeltirilecek ve şimdi onu belirlememizlazım. Bunun için de urdf dosyası içinde düzenleme yapacağız ( kod içinde base linkin hemen üstünde olan satır.)(<link name="base_footprint">).
+
