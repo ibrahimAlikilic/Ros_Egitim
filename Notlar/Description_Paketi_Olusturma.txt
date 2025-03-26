@@ -1,0 +1,8 @@
+1) Önceden oluşturmuş olduğumuz ros2_ws dizinine git
+2) src içinde "ros2 pkg create siple_robot_description" ile paketimizi oluşturalım.
+3) "/ros2_ws/src/simple_robot_description" dizinine gel ve urdf klasörü oluştur : "mkdir urdf"
+4) "/ros2_ws/src/simple_robot_description" dizinimde bulunan src ve include klasörlerine ihtiyacım yok bu yüzden bunları siliyorum : "rm -rf src/ include/"
+5) "/ros2_ws/src" dizinine gel ve vs code başlar.
+6) Building işlemi gerçekleştir (Hatırlatma: "ros2_ws diizninde olman lazım") : "colcon build"
+7) "/home/ibrahim/ros2_ws/install/simple_robot_description/share/simple_robot_description" dizinine gelince urdf dosyamla ilgili oluşmuş olan klasörlerim bulunur.
+
