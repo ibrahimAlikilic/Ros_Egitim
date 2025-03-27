@@ -21,3 +21,17 @@ Açılınca :
 	3.3) Description Topic ( Robot Model içinde ) seç
 4) Belirleyeceğimiz base noktaya göre hareket gerçekşeltirilecek ve şimdi onu belirlememizlazım. Bunun için de urdf dosyası içinde düzenleme yapacağız ( kod içinde base linkin hemen üstünde olan satır.)(<link name="base_footprint">).
 
+****************************
+
+Kendi Launch dosyamızı oluşturararak URDF dosyamızı başlatma:
+1) "/ros2_ws/src/simple_robot_description" dizinine git ve "launch adında klasör oluştur : "mkdir launch" ve dizinin içine gir "cd launch/"
+2) Yazacak olduğumuz kendi .launch.xml dosssyamızı oluşturalım : "nano "display.launch.xml"
+3) CMakeLists içerisine :"
+install( # nedense bu otomatik oluşturunca gelmemişti ben elle ekledim.
+  DIRECTORY urdf launch
+  DESTINATION share/${PROJECT_NAME}/
+)" ekle . Ardında display.launch.xml dosyasını kodlamaya başla. (display.launch_Acilklamali.xml)
+4) build edelim ( work space gitmeyi unutma ) : "colcon build"
+5) Farklı teminalde çalıştıralım bu terminali açınca ilk işimiz source etmek : "bashrc ~/.source
+Not : Eğitimde source etmemiz gerektiğini söyledi lakin benim aklıma bu çalışma alanını önceden gömmüşolduğumuz geldi bu yüzden soruce etmeden direk çalıştırdım ve sorunsuz çalıştı.
+6) çalıştır : "ros2 launch simple_robot_description display.launch.xml"

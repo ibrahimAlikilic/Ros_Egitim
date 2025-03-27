@@ -1,0 +1,21 @@
+<launch>
+    <!-- 'urdf_path' adında bir değişken (let) tanımlıyoruz -->
+    <!-- Bu değişken, simple_robot_description paketinin içindeki urdf dosyasının tam yolunu tutuyor -->
+    <let name="urdf_path" value="$(find-pkg-share simple_robot_description)/urdf/simple_robot.urdf"/>
+
+    <!-- robot_state_publisher düğümünü başlatıyoruz -->
+    <!-- Bu düğüm, robotun eklem (joint) ve bağlantı (link) bilgilerini yaymak için kullanılır -->
+    <node pkg="robot_state_publisher" exec="robot_state_publisher">
+        <!-- robot_description parametresine, xacro kullanarak URDF dosyasını yüklüyoruz -->
+        <!-- $(command 'xacro $(var urdf_path)') komutu, urdf_path değişkenindeki dosyayı işleyerek ROS parametresi olarak yüklüyor -->
+        <param name="robot_description" value="$(command 'xacro $(var urdf_path)')"/>
+    </node>
+
+    <!-- joint_state_publisher_gui düğümünü başlatıyoruz -->
+    <!-- Bu GUI sayesinde eklem açılarını (joint angles) elle değiştirebiliriz -->
+    <node pkg="joint_state_publisher_gui" exec="joint_state_publisher_gui" />
+
+    <!-- RViz2 görüntüleme aracını başlatıyoruz -->
+    <!-- Bu araç, robot modelini ve eklem hareketlerini görselleştirmek için kullanılır -->
+    <node pkg="rviz2" exec="rviz2" />
+</launch>
