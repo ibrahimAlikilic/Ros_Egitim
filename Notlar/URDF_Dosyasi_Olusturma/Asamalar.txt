@@ -35,3 +35,10 @@ install( # nedense bu otomatik oluşturunca gelmemişti ben elle ekledim.
 5) Farklı teminalde çalıştıralım bu terminali açınca ilk işimiz source etmek : "bashrc ~/.source
 Not : Eğitimde source etmemiz gerektiğini söyledi lakin benim aklıma bu çalışma alanını önceden gömmüşolduğumuz geldi bu yüzden soruce etmeden direk çalıştırdım ve sorunsuz çalıştı.
 6) çalıştır : "ros2 launch simple_robot_description display.launch.xml"
+
+**************************************
+Launch dosyasını python olarak yazma :
+1) "/ros2_ws/src/simple_robot_description/launch" dizinine gel ve .py uzantılı dosyanı oluştur.
+Not : Bu .py uzantılı dosyayı çalıştırılabilir dosya haline getirmeye gerek yok çünkü execute etmeyeceğiz ( Yani "chmod +x dosya.py" gerek yok) . ("display.launch.py" bulunan dosya)
+2) Kodla
+
