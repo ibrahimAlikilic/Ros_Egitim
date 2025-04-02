@@ -1,4 +1,23 @@
 1) urdf dosyasını oluştur : "nano "my_robot.urdf""
 2) urdf dosyasını kodla
 3) urdf dosyasını çalıştır : "ros2 launch urdf_tutorial display.launch.py model:=/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/my_robot.urdf"
-4) 
+
+Kendi paketlerimiz ile publish etmemiz lazım.
+1) Dizinimize gel.
+2) "ros2 run robot_state_publisher robot_state_publisher --ros-args -p robot_description:="$(xacro /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/my_robot.urdf)"" ile yayın gerçekleşsin
+3) joint state publisher da gelsin : "ros2 run joint_state_publisher_gui joint_state_publisher_gui"
+4) RViz ortamını başlatalım : "ros2 run rviz2 rviz2"
+Not : Kodda güncelleme yapınca publisher kodunu kapatıp yayını tekrardan başlatmak lazımmış.
+
+Şimdi yukarıdaki işlemleri tek tek her seferinde yazmamak için bir başlart maklasörü yazacağız.
+1) "ros2 pkg create my_robot_description" ile paketi oluştur.
+2) "my_robot_description" içerisinde gereksiz olan sec ve include sil
+3) lanuch ,rviz ve urdf klasörlerini "my_robot_description" içeirisinde oluştur.
+4) CMaleList.txt içeirsine "install(
+  DIRECTORY urdf launch rviz
+  DESTINATION share/${PROJECT_NAME}/
+)" ekle.
+5) urdf uzantılı dosyamızı urdf klasörünün içerisine taşı.
+6) Çalışma alanımızı build edelim : "Ros_Egitim/Projeler/Robot_Modelleme" dizinime geldim ve "colcon build" dedim
+7) soruce edelim "source ~/.bashrc"
+
