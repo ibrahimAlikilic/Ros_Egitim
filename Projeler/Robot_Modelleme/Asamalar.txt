@@ -1,0 +1,4 @@
+1) urdf dosyasını oluştur : "nano "my_robot.urdf""
+2) urdf dosyasını kodla
+3) urdf dosyasını çalıştır : "ros2 launch urdf_tutorial display.launch.py model:=/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/my_robot.urdf"
+4) 
