@@ -1,6 +1,6 @@
 1) urdf dosyasını oluştur : "nano "my_robot.urdf""
 2) urdf dosyasını kodla
-3) urdf dosyasını çalıştır : "ros2 launch urdf_tutorial display.launch.py model:=/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/my_robot.urdf"
+3) urdf dosyasını çalıştır : "ros2 launch urdf_tutorial display.launch.py model:=/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/src/my_robot_description/urdf/my_robot.urdf"
 
 Kendi paketlerimiz ile publish etmemiz lazım.
 1) Dizinimize gel.
@@ -20,4 +20,16 @@ Not : Kodda güncelleme yapınca publisher kodunu kapatıp yayını tekrardan ba
 5) urdf uzantılı dosyamızı urdf klasörünün içerisine taşı.
 6) Çalışma alanımızı build edelim : "Ros_Egitim/Projeler/Robot_Modelleme" dizinime geldim ve "colcon build" dedim
 7) soruce edelim "source ~/.bashrc"
+launch dosyallarını oluşturmaya başlayalım :
+1) Eskiden oluşturmuş olduğumuz dosyaları aldık ve içerisinde düzenlemeleri gerçekleştirdik.
 
+
+1)"/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/src/my_robot_description/urdf" dizinine gel ve "ros2 run robot_state_publisher robot_state_publisher --ros-args -p robot_description:="$(xacro /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/src/my_robot_description/urdf/my_robot.urdf)"" ile publis işlemine başlat.
+2) "ros2 run joint_state_publisher_gui joint_state_publisher_gui" çalıştır.
+3) "ros2 run rviz2 rviz2" çalıştır.
+4) Açılan RViz ortamında gerekli düzenlemeleri yap ve ardından -> file -> save config as  -> rviz içine kaydet ("/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/src/my_robot_description/rviz")
+5) display.launch.py üzerinde güncellemeler gerçekleştir. 
+6) display.launch.xml üzerinde güncellemeler gerçekleştir.
+7) Çalışma alanı dizinine gel ve ( şu anda "/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme") build ve source işlemlerini gerçekleştir : "colcun build" " source ~/.bashrc
+Sorunlar :
+"ros2 launch my_robot_description display.launch.py" hata verdi ben de build ile ilgili sorun olabilir diye hem bashrc içine gönmdüm hem de terminalde soruce edip durdum lakin olmadı ardından kodda mı sıkıntı var diye gpt ile denedim lakin gene çözülmedi ben de /src içinde de build yaptım geen olmadı ardından build ile gelen tüm klasörleri sildim ve Robot_Modelleme dizininde tekrardan build ettim ve bashrc ye de gömdüm . Sonuç olarak "display.launch.xml" ile çalışıyor lakin ""display.launch.py" hata veriyor.

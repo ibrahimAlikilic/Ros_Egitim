@@ -1,0 +1,1 @@
+/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/src/my_robot_description/launch/display.launch.py
