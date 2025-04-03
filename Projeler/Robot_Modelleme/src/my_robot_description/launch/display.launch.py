@@ -10,7 +10,7 @@ from ament_index_python.packages import get_package_share_path  # Paketlerin yol
 
 def generate_launch_description():
     # URDF dosyasının bulunduğu yolu belirle
-    urdf_path = os.path.join(get_package_share_path('my_robot_description'), 'urdf', 'my_robot.urdf')
+    urdf_path = os.path.join(get_package_share_path('my_robot_description'), 'urdf', 'main.xacro')
     rviz_config_path = os.path.join(get_package_share_path('my_robot_description'), 'rviz', 'urdf_config.rviz')
     
     # URDF dosyasını xacro kullanarak işleyip robot tanımı olarak ayarla
