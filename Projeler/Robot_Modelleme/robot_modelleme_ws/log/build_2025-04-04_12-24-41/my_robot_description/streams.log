@@ -1,0 +1,11 @@
+[0.014s] Invoking command in '/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/build/my_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/ros2_ws/install/simple_py_pkg:/home/ibrahim/Ros_Egitim/Projeler/Turtlesim_Hedef_Konuma_Git/turtlesim_ws/install/turtlesim_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/build/my_robot_description -- -j16 -l16
+[0.063s] Invoked command in '/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/build/my_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/ros2_ws/install/simple_py_pkg:/home/ibrahim/Ros_Egitim/Projeler/Turtlesim_Hedef_Konuma_Git/turtlesim_ws/install/turtlesim_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/build/my_robot_description -- -j16 -l16
+[0.077s] Invoking command in '/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/build/my_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/ros2_ws/install/simple_py_pkg:/home/ibrahim/Ros_Egitim/Projeler/Turtlesim_Hedef_Konuma_Git/turtlesim_ws/install/turtlesim_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/build/my_robot_description
+[0.088s] -- Install configuration: ""
+[0.088s] [31mCMake Error at cmake_install.cmake:46 (file):
+[0.088s]   file INSTALL cannot find
+[0.088s]   "/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/my_robot_description/urdf":
+[0.088s]   No such file or directory.
+[0.088s] 
+[0.088s] [0m
+[0.090s] Invoked command in '/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/build/my_robot_description' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/ros2_ws/install/simple_py_pkg:/home/ibrahim/Ros_Egitim/Projeler/Turtlesim_Hedef_Konuma_Git/turtlesim_ws/install/turtlesim_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/build/my_robot_description

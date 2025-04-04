@@ -1,0 +1,1 @@
+/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/build/my_robot_description/ament_cmake_environment_hooks/local_setup.zsh
