@@ -1,0 +1,54 @@
+[0.009s] Invoking command in '/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/build/my_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/ros2_ws/install/simple_py_pkg:/home/ibrahim/Ros_Egitim/Projeler/Turtlesim_Hedef_Konuma_Git/turtlesim_ws/install/turtlesim_py_pkg:/opt/ros/humble /usr/bin/cmake /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/src/my_robot_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/install/my_robot_description
+[0.107s] -- The C compiler identification is GNU 11.4.0
+[0.185s] -- The CXX compiler identification is GNU 11.4.0
+[0.192s] -- Detecting C compiler ABI info
+[0.255s] -- Detecting C compiler ABI info - done
+[0.260s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.260s] -- Detecting C compile features
+[0.261s] -- Detecting C compile features - done
+[0.264s] -- Detecting CXX compiler ABI info
+[0.336s] -- Detecting CXX compiler ABI info - done
+[0.342s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.342s] -- Detecting CXX compile features
+[0.342s] -- Detecting CXX compile features - done
+[0.346s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.469s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.521s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.547s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.612s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.613s] -- Added test 'lint_cmake' to check CMake code style
+[0.613s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.615s] -- Added test 'xmllint' to check XML markup files
+[0.616s] -- Configuring done
+[0.619s] -- Generating done
+[0.620s] -- Build files have been written to: /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/build/my_robot_description
+[0.624s] Invoked command in '/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/build/my_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/ros2_ws/install/simple_py_pkg:/home/ibrahim/Ros_Egitim/Projeler/Turtlesim_Hedef_Konuma_Git/turtlesim_ws/install/turtlesim_py_pkg:/opt/ros/humble /usr/bin/cmake /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/src/my_robot_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/install/my_robot_description
+[0.626s] Invoking command in '/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/build/my_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/ros2_ws/install/simple_py_pkg:/home/ibrahim/Ros_Egitim/Projeler/Turtlesim_Hedef_Konuma_Git/turtlesim_ws/install/turtlesim_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/build/my_robot_description -- -j16 -l16
+[0.662s] Invoked command in '/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/build/my_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/ros2_ws/install/simple_py_pkg:/home/ibrahim/Ros_Egitim/Projeler/Turtlesim_Hedef_Konuma_Git/turtlesim_ws/install/turtlesim_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/build/my_robot_description -- -j16 -l16
+[0.671s] Invoking command in '/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/build/my_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/ros2_ws/install/simple_py_pkg:/home/ibrahim/Ros_Egitim/Projeler/Turtlesim_Hedef_Konuma_Git/turtlesim_ws/install/turtlesim_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/build/my_robot_description
+[0.678s] -- Install configuration: ""
+[0.678s] -- Execute custom install script
+[0.678s] -- Symlinking: /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/install/my_robot_description/share/my_robot_description//urdf/main.xacro
+[0.687s] -- Symlinking: /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/install/my_robot_description/share/my_robot_description//urdf/my_robot.xacro
+[0.695s] -- Symlinking: /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/install/my_robot_description/share/my_robot_description//urdf/properties.xacro
+[0.704s] -- Symlinking: /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/install/my_robot_description/share/my_robot_description//launch/.vscode/c_cpp_properties.json
+[0.712s] -- Symlinking: /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/install/my_robot_description/share/my_robot_description//launch/.vscode/settings.json
+[0.720s] -- Symlinking: /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/install/my_robot_description/share/my_robot_description//launch/display.launch.py
+[0.728s] -- Symlinking: /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/install/my_robot_description/share/my_robot_description//launch/display.launch.xml
+[0.736s] -- Symlinking: /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/install/my_robot_description/share/my_robot_description//rviz/urdf_config.rviz
+[0.744s] -- Symlinking: /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/install/my_robot_description/share/ament_index/resource_index/package_run_dependencies/my_robot_description
+[0.752s] -- Symlinking: /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/install/my_robot_description/share/ament_index/resource_index/parent_prefix_path/my_robot_description
+[0.760s] -- Symlinking: /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/install/my_robot_description/share/my_robot_description/environment/ament_prefix_path.sh
+[0.768s] -- Symlinking: /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/install/my_robot_description/share/my_robot_description/environment/ament_prefix_path.dsv
+[0.776s] -- Symlinking: /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/install/my_robot_description/share/my_robot_description/environment/path.sh
+[0.784s] -- Symlinking: /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/install/my_robot_description/share/my_robot_description/environment/path.dsv
+[0.792s] -- Symlinking: /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/install/my_robot_description/share/my_robot_description/local_setup.bash
+[0.800s] -- Symlinking: /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/install/my_robot_description/share/my_robot_description/local_setup.sh
+[0.808s] -- Symlinking: /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/install/my_robot_description/share/my_robot_description/local_setup.zsh
+[0.817s] -- Symlinking: /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/install/my_robot_description/share/my_robot_description/local_setup.dsv
+[0.825s] -- Symlinking: /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/install/my_robot_description/share/my_robot_description/package.dsv
+[0.833s] -- Symlinking: /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/install/my_robot_description/share/ament_index/resource_index/packages/my_robot_description
+[0.841s] -- Symlinking: /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/install/my_robot_description/share/my_robot_description/cmake/my_robot_descriptionConfig.cmake
+[0.849s] -- Symlinking: /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/install/my_robot_description/share/my_robot_description/cmake/my_robot_descriptionConfig-version.cmake
+[0.858s] -- Symlinking: /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/install/my_robot_description/share/my_robot_description/package.xml
+[0.868s] Invoked command in '/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/build/my_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/ros2_ws/install/simple_py_pkg:/home/ibrahim/Ros_Egitim/Projeler/Turtlesim_Hedef_Konuma_Git/turtlesim_ws/install/turtlesim_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/build/my_robot_description

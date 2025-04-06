@@ -1,4 +1,4 @@
-# Install script for directory: /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/my_robot_description
+# Install script for directory: /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/src/my_robot_description
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

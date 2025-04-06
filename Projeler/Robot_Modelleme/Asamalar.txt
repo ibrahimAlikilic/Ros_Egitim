@@ -33,3 +33,8 @@ launch dosyallarını oluşturmaya başlayalım :
 7) Çalışma alanı dizinine gel ve ( şu anda "/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme") build ve source işlemlerini gerçekleştir : "colcun build" " source ~/.bashrc
 Sorunlar :
 "ros2 launch my_robot_description display.launch.py" hata verdi ben de build ile ilgili sorun olabilir diye hem bashrc içine gönmdüm hem de terminalde soruce edip durdum lakin olmadı ardından kodda mı sıkıntı var diye gpt ile denedim lakin gene çözülmedi ben de /src içinde de build yaptım geen olmadı ardından build ile gelen tüm klasörleri sildim ve Robot_Modelleme dizininde tekrardan build ettim ve bashrc ye de gömdüm . Sonuç olarak "display.launch.xml" ile çalışıyor lakin ""display.launch.py" hata veriyor.
+
+Not : robot_modelleme_ws devam ediyorum
+
+Gazebo :
+1)

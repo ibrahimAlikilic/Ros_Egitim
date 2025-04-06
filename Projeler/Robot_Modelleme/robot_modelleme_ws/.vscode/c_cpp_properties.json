@@ -7,7 +7,7 @@
       },
       "includePath": [
         "/opt/ros/humble/include/**",
-        "/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/my_robot_description/include/**",
+        "/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/src/my_robot_description/include/**",
         "/usr/include/**"
       ],
       "name": "ROS",
