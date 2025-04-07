@@ -36,6 +36,10 @@
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/> 
             <material name="cyan" />
         </visual>
+
+        <!--Eylemsizlik momenti çağırma-->
+        <xacro:box_inertia m = "5.0" l = "${base_lenght}*2" w = "${base_width}" h = "${base_height}"
+                           xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" /> 
     </link>
 
     <link name="caster_wheel_link">

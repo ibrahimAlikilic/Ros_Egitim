@@ -9,4 +9,61 @@
         <color rgba="0 0 0 1"/>
     </material>
 
+    <!--Eylemsizlik momenti -->
+    <xacro:macro name = "box_inertia" params = "m l w h xyz rpy"> <!-- parametrelerim kütle ve ölçüleri.-->
+        <inertial>
+            <!-- Sırayla nesnemin origin , kütle , eylemsizliğini tanımlayacağım.-->
+            <origin xyz="${xyz}" rpy="${rpy}"/>
+            <mess value = "${m}" /> <!-- Kütle tanımladık-->
+            <inertia ixx="${(m/12) * (h*h + l*l)}" ixy="0" ixz="0" 
+            iyy="${(m/12) * (w*w + l*l)}" iyz="0" 
+            izz="${(m/12) * (w*w + h*h)}"/> <!--Tanımlamaları hazır olarak wikipedia da bulunuyor.-->
+            <!-- 
+            Eylemsizlik tensörü (moment of inertia), cismin kütlesinin dağılımına göre dönmeye karşı gösterdiği dirençtir.
+            Dikdörtgen bir kutu (box) için eylemsizlik değerleri standart fizik formülleriyle hesaplanır.
+
+            Bu kutunun boyutları:
+              - l: uzunluk (x ekseni yönünde)
+              - w: genişlik (y ekseni yönünde)
+              - h: yükseklik (z ekseni yönünde)
+              - m: kütle
+
+            Bu durumda, kutunun merkezinden geçen eksenler etrafındaki eylemsizlik momenti aşağıdaki formüllerle hesaplanır:
+
+            - ixx = (1/12) * m * (h² + l²)
+              -> x ekseni etrafındaki dönmeye karşı dirençtir (yükseklik ve uzunluğun karesi alınır çünkü dik eksenler onlar).
+
+            - iyy = (1/12) * m * (w² + l²)
+              -> y ekseni etrafındaki direnç (genişlik ve uzunluk karesi).
+
+            - izz = (1/12) * m * (w² + h²)
+              -> z ekseni etrafındaki direnç (genişlik ve yükseklik karesi).
+
+            - ixy, ixz, iyz = 0
+              -> Simetrik ve düzgün dağılımlı bir kutu için çarpraz eylemsizlik terimleri sıfırdır (off-diagonal elemanlar).
+            -->
+        </inertial>
+    </xacro:macro>
+
+  <xacro:macro name = "cylinder_inertia" params = "m r h xyz rpy"> <!-- parametrelerim kütle ve ölçüleri.-->
+        <inertial>
+            <origin xyz="${xyz}" rpy="${rpy}"/>
+            <mess value = "${m}" />
+            <inertia ixx="${(m/12) * (3*r*r + h*h)}" ixy="0" ixz="0" 
+            iyy="${(m/12) * (3*r*r + h*h)}" iyz="0" 
+            izz="${(m/2) * (r*r)}"/> 
+        </inertial>
+  </xacro:macro>
+
+  <xacro:macro name = "sphere_inertia" params = "m r xyz rpy"> <!-- parametrelerim kütle ve ölçüleri.-->
+        <inertial>
+            <origin xyz="${xyz}" rpy="${rpy}"/>
+            <mess value = "${m}" />
+            <inertia ixx="${(2/5) * (m*r*r)}" ixy="0" ixz="0" 
+            iyy="${(2/5) * (m*r*r)}" iyz="0" 
+            izz="${(2/5) * (m*r*r)}"/> 
+        </inertial>
+  </xacro:macro>
+
+
 </robot>
