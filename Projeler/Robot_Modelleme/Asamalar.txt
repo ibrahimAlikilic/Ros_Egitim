@@ -38,5 +38,5 @@ Not : robot_modelleme_ws devam ediyorum
 
 Gazebo :
 Her parçanın eylemsizlik momenti farklıdır , bu yüzden her bir şekil için macro  tanımlanıp ardından gerekli yerde kullanılacak.
-Link etiketi içerisinde </visual> altına tanımlanır.
+Link etiketi <inertial></inertial> tagları arasında oluşturuyoruz.
 

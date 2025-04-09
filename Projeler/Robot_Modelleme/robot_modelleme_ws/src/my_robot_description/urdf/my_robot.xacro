@@ -14,8 +14,11 @@
         <link name="${prefix}_wheel_link">
 
             <inertial>
-                <mass value="1" />
-                <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3" />
+                <mass value="1" /> <!--Tekerleğin toplam kütlesi 1 kg olarak varsayılmış.-->
+                <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3" /> <!--1e-3 = 1 × 10⁻³ = 0.001-->
+                <!--xyz ve rpy neden yok :
+                inertial içinde origin etiketi opsiyoneldir. Eğer belirtilmezse, inertial özelliklerin konumu link’in merkezine göre tanımlanır (yani 0 0 0 varsayılır).
+                -->
             </inertial>
 
             <visual>
@@ -28,7 +31,7 @@
                 <material name="black" />
             </visual>
 
-            <collision>
+            <collision> <!-- Eylemsizlik momenti olan inertial kullanabilmek için lazım. -->
                 <geometry>
                     <cylinder radius="${wheel_radius}" length="${wheel_lenght}"/>
                 </geometry>
