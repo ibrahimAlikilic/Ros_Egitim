@@ -1,1 +1,0 @@
-/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelleme/robot_modelleme_ws/src/my_robot_description/urdf/install/_local_setup_util_sh.py
