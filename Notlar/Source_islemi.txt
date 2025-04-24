@@ -1,0 +1,5 @@
+Bazı durumlarda
+1) "colcon build" 
+2) "source ~./bashrc" olmuyor
+3) [2] nin yerine "source install/setup.bash" şeklinde source etmek gerekebiliyor. 
+4) paketin source edilip edilmediğini kontrol etmek için "ros2 pkg list | grep paket_adi" yapabilirsin.
