@@ -1,0 +1,2 @@
+xacro uzantılı dosyaları birleştirip urdf dosyası elde etmemiz gerekebiliyor bu tür durumda tek tek birleştirince hata alabiliyoruz bunun yerine kullanmamız gereken komut : "ros2 run xacro xacro your_robot.xacro > your_robot.urdf
+" .
