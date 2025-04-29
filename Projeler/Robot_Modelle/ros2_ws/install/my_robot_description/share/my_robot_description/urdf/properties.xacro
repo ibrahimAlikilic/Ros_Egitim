@@ -1,12 +1,1 @@
-<?xml version="1.0"?>
-<robot name="my_robot" xmlns:xacro = "http://www.ros.org/wiki/xacro" > <!-- xmlns:xacro = "http://www.ros.org/wiki/xacro>" kısmı xacro kullanabilmek için.-->
-
-<material name="cyan">
-        <color rgba="0 1 1 1"/>
-    </material>
-    <material name="black">
-        <color rgba="0 0 0 1"/>
-    </material>
-
-</robot>
-
+/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelle/ros2_ws/src/my_robot_description/urdf/properties.xacro

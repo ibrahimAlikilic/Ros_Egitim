@@ -65,7 +65,16 @@ Problemler :
 Renkler default geliyor , bizim istediğimiz renkler gelmiyor
 Bunun çözümü için "properties_gazebo.xacro" oluşturuyoruz.
 
+Hareket ettirme : 
+1) kodda gerekli düzenlemerleri yap .
+2) terminalden ortamları çalıştırdıktan sonra : "ros2 topic pub /cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.5}, angular: {z: 0}}"" komutu ile hareket emri ver.
 
+***********************
+
+Gazebo ortamına oluşturduğumuz robotu göndermek için :
+1)bringup içierisinde worlds dosyası oluşturduk ( cmake içerisine belirttik.) . 
+2) "gazebo" komutu ile gazebo ortmaında oluştur ve "save world as" ile world dosyanın içerisine kayıt et.
+3) launch dosyanı düzenle.
 
 
 

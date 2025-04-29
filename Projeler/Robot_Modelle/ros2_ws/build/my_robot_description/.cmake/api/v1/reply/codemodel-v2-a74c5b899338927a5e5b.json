@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-5ffa74615cfdc734533a.json",
+					"jsonFile" : "directory-.-39a9d36cb6e0b3ef255f.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.12"
@@ -29,7 +29,7 @@
 					[
 						0
 					],
-					"name" : "my_robot_bringup",
+					"name" : "my_robot_description",
 					"targetIndexes" : 
 					[
 						0,
@@ -41,15 +41,15 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "my_robot_bringup_uninstall::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-my_robot_bringup_uninstall-d6ccf821f66f395a5202.json",
-					"name" : "my_robot_bringup_uninstall",
+					"id" : "my_robot_description_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-my_robot_description_uninstall-745de2838fbc2655d37d.json",
+					"name" : "my_robot_description_uninstall",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "uninstall::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-uninstall-300a67c791cfd26ceb13.json",
+					"jsonFile" : "target-uninstall-4b046017fab76f45fa98.json",
 					"name" : "uninstall",
 					"projectIndex" : 0
 				}
@@ -59,8 +59,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelle/ros2_ws/build/my_robot_bringup",
-		"source" : "/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelle/ros2_ws/src/my_robot_bringup"
+		"build" : "/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelle/ros2_ws/build/my_robot_description",
+		"source" : "/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelle/ros2_ws/src/my_robot_description"
 	},
 	"version" : 
 	{
