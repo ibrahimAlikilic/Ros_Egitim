@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot name="my_robot" xmlns:xacro = "http://www.ros.org/wiki/xacro" > <!-- xmlns:xacro = "http://www.ros.org/wiki/xacro>" kısmı xacro kullanabilmek için.-->
 
-    <gazebo referance = "base_link">
+    <gazebo reference="base_link">
         <material>Gazebo/Blue</material>
     </gazebo>
 
