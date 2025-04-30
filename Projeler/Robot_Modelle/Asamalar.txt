@@ -76,6 +76,8 @@ Gazebo ortamına oluşturduğumuz robotu göndermek için :
 2) "gazebo" komutu ile gazebo ortmaında oluştur ve "save world as" ile world dosyanın içerisine kayıt et.
 3) launch dosyanı düzenle.
 
+Duyargalar Ekleme
+
 
 
 Çalıştırma : "ros2 launch my_robot_bringup my_robot_gazebo.launch.xml"
