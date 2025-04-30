@@ -1,0 +1,33 @@
+[0.521s] Invoking command in '/home/ibrahim/Ros_Egitim/Projeler/Lidar/ros2_ws/src/lidar_py_pkg': PYTHONPATH=/home/ibrahim/Ros_Egitim/Projeler/Lidar/ros2_ws/build/lidar_py_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ibrahim/Ros_Egitim/Projeler/Lidar/ros2_ws/install/lidar_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lidar_py_pkg build --build-base /home/ibrahim/Ros_Egitim/Projeler/Lidar/ros2_ws/build/lidar_py_pkg/build install --record /home/ibrahim/Ros_Egitim/Projeler/Lidar/ros2_ws/build/lidar_py_pkg/install.log --single-version-externally-managed install_data
+[0.710s] running egg_info
+[0.710s] creating ../../build/lidar_py_pkg/lidar_py_pkg.egg-info
+[0.710s] writing ../../build/lidar_py_pkg/lidar_py_pkg.egg-info/PKG-INFO
+[0.710s] writing dependency_links to ../../build/lidar_py_pkg/lidar_py_pkg.egg-info/dependency_links.txt
+[0.710s] writing entry points to ../../build/lidar_py_pkg/lidar_py_pkg.egg-info/entry_points.txt
+[0.711s] writing requirements to ../../build/lidar_py_pkg/lidar_py_pkg.egg-info/requires.txt
+[0.711s] writing top-level names to ../../build/lidar_py_pkg/lidar_py_pkg.egg-info/top_level.txt
+[0.711s] writing manifest file '../../build/lidar_py_pkg/lidar_py_pkg.egg-info/SOURCES.txt'
+[0.712s] reading manifest file '../../build/lidar_py_pkg/lidar_py_pkg.egg-info/SOURCES.txt'
+[0.712s] writing manifest file '../../build/lidar_py_pkg/lidar_py_pkg.egg-info/SOURCES.txt'
+[0.712s] running build
+[0.712s] running build_py
+[0.713s] creating /home/ibrahim/Ros_Egitim/Projeler/Lidar/ros2_ws/build/lidar_py_pkg/build
+[0.713s] creating /home/ibrahim/Ros_Egitim/Projeler/Lidar/ros2_ws/build/lidar_py_pkg/build/lib
+[0.713s] creating /home/ibrahim/Ros_Egitim/Projeler/Lidar/ros2_ws/build/lidar_py_pkg/build/lib/lidar_py_pkg
+[0.713s] copying lidar_py_pkg/__init__.py -> /home/ibrahim/Ros_Egitim/Projeler/Lidar/ros2_ws/build/lidar_py_pkg/build/lib/lidar_py_pkg
+[0.713s] running install
+[0.713s] running install_lib
+[0.714s] creating /home/ibrahim/Ros_Egitim/Projeler/Lidar/ros2_ws/install/lidar_py_pkg/lib/python3.10/site-packages/lidar_py_pkg
+[0.714s] copying /home/ibrahim/Ros_Egitim/Projeler/Lidar/ros2_ws/build/lidar_py_pkg/build/lib/lidar_py_pkg/__init__.py -> /home/ibrahim/Ros_Egitim/Projeler/Lidar/ros2_ws/install/lidar_py_pkg/lib/python3.10/site-packages/lidar_py_pkg
+[0.715s] byte-compiling /home/ibrahim/Ros_Egitim/Projeler/Lidar/ros2_ws/install/lidar_py_pkg/lib/python3.10/site-packages/lidar_py_pkg/__init__.py to __init__.cpython-310.pyc
+[0.715s] running install_data
+[0.715s] creating /home/ibrahim/Ros_Egitim/Projeler/Lidar/ros2_ws/install/lidar_py_pkg/share/ament_index
+[0.715s] creating /home/ibrahim/Ros_Egitim/Projeler/Lidar/ros2_ws/install/lidar_py_pkg/share/ament_index/resource_index
+[0.715s] creating /home/ibrahim/Ros_Egitim/Projeler/Lidar/ros2_ws/install/lidar_py_pkg/share/ament_index/resource_index/packages
+[0.715s] copying resource/lidar_py_pkg -> /home/ibrahim/Ros_Egitim/Projeler/Lidar/ros2_ws/install/lidar_py_pkg/share/ament_index/resource_index/packages
+[0.715s] copying package.xml -> /home/ibrahim/Ros_Egitim/Projeler/Lidar/ros2_ws/install/lidar_py_pkg/share/lidar_py_pkg
+[0.715s] running install_egg_info
+[0.717s] Copying ../../build/lidar_py_pkg/lidar_py_pkg.egg-info to /home/ibrahim/Ros_Egitim/Projeler/Lidar/ros2_ws/install/lidar_py_pkg/lib/python3.10/site-packages/lidar_py_pkg-0.0.0-py3.10.egg-info
+[0.717s] running install_scripts
+[0.734s] writing list of installed files to '/home/ibrahim/Ros_Egitim/Projeler/Lidar/ros2_ws/build/lidar_py_pkg/install.log'
+[0.756s] Invoked command in '/home/ibrahim/Ros_Egitim/Projeler/Lidar/ros2_ws/src/lidar_py_pkg' returned '0': PYTHONPATH=/home/ibrahim/Ros_Egitim/Projeler/Lidar/ros2_ws/build/lidar_py_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ibrahim/Ros_Egitim/Projeler/Lidar/ros2_ws/install/lidar_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lidar_py_pkg build --build-base /home/ibrahim/Ros_Egitim/Projeler/Lidar/ros2_ws/build/lidar_py_pkg/build install --record /home/ibrahim/Ros_Egitim/Projeler/Lidar/ros2_ws/build/lidar_py_pkg/install.log --single-version-externally-managed install_data

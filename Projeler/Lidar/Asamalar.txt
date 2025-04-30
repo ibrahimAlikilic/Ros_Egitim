@@ -1,0 +1,6 @@
+Lidar verilerini işleyip inceleyeceğiz.
+1) "ros2 pkg create lidar_py_pkg --build-type ament_python --dependencies rclpy" ile paketini oluştur.
+2) Ardından gerekli dosyaları oluştur ve execute edeceğin dosyalara execute özelliği ver.
+3) bunları setup.py içerisine işle
+
+Yapmmamız gereken şey yayınlanan lidar değerlerini abone olarak görmek. Ardından yayıncının yayınladığı açısal ve doğrusal değerlere  göre robotumuz ilerleyecek ya da duracak.

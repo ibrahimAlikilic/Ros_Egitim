@@ -1,0 +1,3 @@
+[console_scripts]
+lidar_data_node = lidar_py_pkg.lidar_data_node:main
+
