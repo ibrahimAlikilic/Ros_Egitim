@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<robot name="my_robot" xmlns:xacro = "http://www.ros.org/wiki/xacro" > <!-- xmlns:xacro = "http://www.ros.org/wiki/xacro>" kısmı xacro kullanabilmek için.-->
+
+    <!-- === Fiziksel Parametreler === -->
+    <xacro:property name="base_height" value="0.2" />
+
+    <xacro:property name="lidar_radius" value="0.08" />
+    <xacro:property name="lidar_lenght" value="0.05" />
+    <xacro:property name="lidar_mass" value="0.2" />
+
+    <!-- === Atalet Momentleri (İnertial) Hesaplamaları === -->
+    <!-- Silindir için (lidar) -->
+    <xacro:property name="lidar_ixx" value="${(1/12.0)*lidar_mass*(3*lidar_radius*lidar_radius + lidar_lenght*lidar_lenght)}" />
+    <xacro:property name="lidar_iyy" value="${0.5*lidar_mass*lidar_radius*lidar_radius}" />
+    <xacro:property name="lidar_izz" value="${(1/12.0)*lidar_mass*(3*lidar_radius*lidar_radius + lidar_lenght*lidar_lenght)}" />
+
+    
+
+    <link name="lidar_link">
+        <inertial>
+            <mass value="${lidar_mass}" />
+            <inertia 
+                ixx="${lidar_ixx}" ixy="0.0" ixz="0.0"
+                iyy="${lidar_iyy}" iyz="0.0" izz="${lidar_izz}" />
+        </inertial>
+        <visual>
+            <geometry>
+                <cylinder radius="${lidar_radius}" length="${lidar_lenght}"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0 0.0  0.0"/>
+            <material name="gray" />
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="${lidar_radius}" length="${lidar_lenght}"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0 0.0  0.0"/>
+        </collision>
+    </link>
+
+    <joint name="base_lidar_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="lidar_link"/>
+        <origin xyz="0 0 ${base_height/2 + lidar_lenght/2}" rpy="0.0 0.0 0.0"/>
+    </joint> 
+    
+
+
+    <!--Şimdi eklediğimiz nesnenin kamera olduğunu gazeboya bildireceğiz.-->
+    <gazebo reference = "lidar_link">
+        <material>Gazebo/Grey</material>
+        <sensor name = "lidar_sensor" type = "ray">
+            <pose>0 0 0 0 0 0</pose> <!--x y z r p y değerlerini belirttik-->
+            <visualize>true</visualize> <!--Çıktı görüp görmek istemediğimizi belirtiyoruz.-->
+            <update_rate>10.0</update_rate> <!-- Kameranın güncellenme oranını ifade eder.-->
+
+            <!--Lidar için yapmamız gereken spesifik tanımlamalar var onları yapacağız. -->
+            <ray> <!--2 boyutlu lidarlar için geçerli değerler.-->
+                <scan>
+                    <horizontal>
+                        <samples>720</samples>         <!-- Lazer ışını sayısı -->
+                        <resolution>1</resolution>     <!-- Açısal çözünürlük -->
+                        <min_angle>-3.14</min_angle> <!-- -90 derece -->
+                        <max_angle>3.14</max_angle>  <!-- +90 derece -->
+                    </horizontal>
+                </scan>
+                <range>
+                    <min>0.1</min>                   <!-- Minimum ölçüm mesafesi -->
+                    <max>30.0</max>                    <!-- Maksimum ölçüm mesafesi -->
+                    <resolution>0.01</resolution>    <!-- Mesafe çözünürlüğü -->
+                </range>
+                <!--Gpt verdi ama biz kullanmadık
+                <noise>
+                    <type>gaussian</type>
+                    <mean>0.0</mean>
+                    <stddev>0.01</stddev>
+                </noise>
+                -->
+            </ray>
+
+
+            <!--Default  Tanımlamalar.-->
+            <plugin name = "lidar" filename = "libgazebo_ros_ray_sensor.so">
+                <output_type>sensor_msgs/LaseScan</output_type> <!--lidar , lazer için bunu kullanıyoruz-->
+            </plugin>
+        </sensor>
+          
+    </gazebo>
+</robot>
+

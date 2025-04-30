@@ -1,4 +1,5 @@
 /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelle/ros2_ws/install/my_robot_description/share/my_robot_description//urdf/camera.xacro
+/home/ibrahim/Ros_Egitim/Projeler/Robot_Modelle/ros2_ws/install/my_robot_description/share/my_robot_description//urdf/lidar.xacro
 /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelle/ros2_ws/install/my_robot_description/share/my_robot_description//urdf/main.xacro
 /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelle/ros2_ws/install/my_robot_description/share/my_robot_description//urdf/my_robot.xacro
 /home/ibrahim/Ros_Egitim/Projeler/Robot_Modelle/ros2_ws/install/my_robot_description/share/my_robot_description//urdf/properties.xacro
