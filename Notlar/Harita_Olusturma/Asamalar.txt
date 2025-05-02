@@ -1,0 +1,9 @@
+1) Terminalimize bu ortam değişkenini tanımlayın : "export TURTLEBOT3_MODEL=burger"
+2) Ardından robotumuzu gazeboda başlatalım : "ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py"
+3) Kartografer paketini çalıştırmam lazım . Bu paketi kullanarak robotun bulunduğu ortamı haritalandırmasını sağlayabiliyoruz (RViz ortamında) : "ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:=True" . Not use_sim_time:=True kısmı simülasyon kısmı ile zaman olarak aynı ilerle demek . Eş zamanlılık sağlıyor.
+4) Teleop düğümünü çalıştıralım ve bu düğüm vasıtasıyla işlemlerimizi gerçekleştirelim : "export TURTLEBOT3_MODEL=burger" "ros2 run turtlebot3_teleop teleop_keyboard"
+
+***
+
+Harita kaydetme : 
+1) "ros2 run nav2_map_server map_saver_cli  -f /home/ibrahim/Ros_Egitim/Notlar/Harita_Olusturma/simple_map"
