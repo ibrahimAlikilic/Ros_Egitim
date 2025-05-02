@@ -1,0 +1,1 @@
+/home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/src/turtlebot3_fake_node/launch/turtlebot3_fake_node.launch.py

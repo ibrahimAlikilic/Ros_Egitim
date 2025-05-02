@@ -1,0 +1,1 @@
+/home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/build/turtlebot3_simulations/ament_cmake_core/turtlebot3_simulationsConfig-version.cmake

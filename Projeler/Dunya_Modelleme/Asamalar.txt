@@ -1,0 +1,25 @@
+1) "Edit -> building editor " kısmından ortam yaratabilirsin.
+	Belli bir plana bağlı çalışmamız lazım ve bunun için de "import" kısmına gelip burada o planı ekleyebilirsin. Bu planları farklı çizim ortamları sayesinde oluşturmuş olabilrisin.
+	Program kapsamında "https://mazegenerator.net" sayfasını kullanıcaz.
+	Burada istediğin şeyi oluşturup ardından gazebo ortamında üzerinden geçerek çizerek gerçekleyebilirsin
+	Oluşturduğumuz ".wolrd" dosyası aslında bir "sdf" dosyasıdır . 
+2) Gazbo ortamını başlatıp oluşturduğun dünyayı çağırabilirsin.
+
+Oluşturduğumuz dünyaya turtlebot3 spun etme. Bunun için turtlebot3 ün launch dosyalarıne erişmemiz ve bunların üzerinde bazı değişiklikler yapmamız lazım.
+1) "https://github.com/ROBOTIS-GIT/turtlebot3_simulations" sayfasına git.
+2) Bu repoyu klanlayacağın ws oluştur ve oraya klonla.
+3) biz ros'un humble olarak kullanıyoruz ve indirdiğimiz reponun buna uygunluğunu kontrol etme için : "git checkout humble-devel" komutunu kullanıyoruz.
+4) "git branch" diyoruz ve humble-devel brunch'ına geçmiş olduğumuzu görüyoruz.
+5) tekrardan build ve source işlemlerini gerçekleştirebiliriz.
+6) "ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py " ile doğru bir şekilde çekip çekmediğimizi teğit ediyoruz. 
+
+Şimdi baktığımız zaman "/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/src/turtlebot3_gazebo/worlds" dizininde dünyalar var ve biz kendi oluşturduğumuz dünyayı burada kullanmak istiyoruz . Bunu da :
+1) Oluştrumuş olduğumuz "maze.world" buraya kopyalıyoruz. 
+	Şimdi bizim dosyamız sdf formatındaydı lakin bu dünyadaki dosyalara baktığımızda xml formatındalar bu yüzden bu dünyalrda olanlardan birini alır ve xml etiketini "maze.world" içine yapıştırıp revize ederiz.
+2) "/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/src/turtlebot3_gazebo/launch" dizinine geliriz ve biz biliyoruz ki eğer bu launch dosyalarında biz eğer dünya olarak kendi oluşturduğumuz dünyayı verirsek bizim dünyamız açılır.
+	Ben buradaki "turtlebot3_house.launch.py" dosyasını kopyalayacağım ve ardından düzenleyeceğim.
+	kopyamı yeni bir isimle oluşturdum (./turtlebot3_world.launch.py) ve ilk olarak dünya adımı güncelledim . 
+3) Build ve source işlemlerini gerçekleştiriyorum. ( build işlemini "--symlink-install" olmadan yap çünkü olunca kabul olmuyor.)
+4) Ana dizinime gelip "source .bashrc" diyorum
+5) Ardından "ros2 launch turtlebot3_gazebo ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py" komutunu çalıştır.
+	Robotumun başlangıç pozisyonunu pose değerlerini gazebo üzerinden görüp kod içinde güncelleyebilirim.
