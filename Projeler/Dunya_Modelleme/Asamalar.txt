@@ -21,5 +21,26 @@ Oluşturduğumuz dünyaya turtlebot3 spun etme. Bunun için turtlebot3 ün launc
 	kopyamı yeni bir isimle oluşturdum (./turtlebot3_world.launch.py) ve ilk olarak dünya adımı güncelledim . 
 3) Build ve source işlemlerini gerçekleştiriyorum. ( build işlemini "--symlink-install" olmadan yap çünkü olunca kabul olmuyor.)
 4) Ana dizinime gelip "source .bashrc" diyorum
-5) Ardından "ros2 launch turtlebot3_gazebo ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py" komutunu çalıştır.
+5) Ardından "ros2 launch turtlebot3_gazebo turtlebot3_maze_world.launch.py " komutunu çalıştır. (ws içinde)
 	Robotumun başlangıç pozisyonunu pose değerlerini gazebo üzerinden görüp kod içinde güncelleyebilirim.
+	
+	
+Not : Kapıyı resimden oluştururken joint ile duvara bağlamamış bu yüzden döndüremiyoruz bir daha dünya oluştururken buna dikkat et.
+	
+*****************************
+Haritalandırmayı Gerçekleştirelim :
+1) "ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:=True" ile rviz ortamında haritalandırmayı başlat.
+2) Ana dizine gel ve "source .bashrc" ile source et
+3) "ros2 run turtlebot3_teleop teleop_keyboard" ile tuş takımını başlat.
+	RViz ortamında "odometry" Display'ini etkinleştirerek robotun yönünü görebilirsin.
+4) "ros2 run nav2_map_server map_saver_cli -f /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/maze_world/maze.yaml" ile belirttiğim dizinime kaydettim
+
+Oluşturduğumuz haritalarımızda kaymalar meydana gelmiş olabilir . Bunları düzenleyelim.
+	Düzenlemelerimizi gimp uygulaması üzerinde gerçekleştireceğiz : "sudo snap install gimp"
+1) "gimp" ile uygulamayı başlatalım.
+	"Export as" ile kaydedicez
+	
+Tekrardan yenilenmiş haritamızla çalıştıralım:
+1) "ros2 launch turtlebot3_gazebo turtlebot3_maze_world.launch.py "
+2) "ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=/home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/maze_world/maze.yaml.yaml" ile başlatıyorum
+	Ve karşıma editlemiş olduğum ( adını maze.yaml.yaml ile uyuşsun diye tekrardan maze.yaml.pgm yapmıştık) harita ile RViz ortamım açıldı.
