@@ -1,0 +1,6 @@
+sudo apt update
+sudo apt install ros-humble-rmw-cyclonedds-cpp
+cd /opt/ros/humble/share/turtlebot3_navigation2/param/
+gedit waffel.yaml
+	robot_model_type: "nav2_amcl::DifferentialMotionModel" şeklinde olmalı
+
