@@ -1,0 +1,9 @@
+1) "/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws" dizinine gel
+2) "colcon build" , "source install/setup.bash" gerçekleştir
+	"ros2 launch turtlebot3_gazebo turtlebot3_" +tab+tab yapınca kendin oluşturmuş olduğun mazr_world gelmiş olmalı
+3) Ana dizine dön
+4) "ros2 launch turtlebot3_gazebo turtlebot3_maze_world.launch.py" ile dünyayı başlat.
+5) ros2 nini bize sağladığı navigasyon 2 paketinde kendi çizmiş olduğumuz haritayı kullanacağız : "ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=/home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/maze_world/maze.yaml.yaml"
+	RViz ortamına baktığımız zaman "Global Status" error veriyor bunu çözmek için "2D Pose Estimate" ile ose veriyoruz ve düzeliyor.
+		Robotum hangi yöne bakıyorsa onu verdim.
+	Nav2 Goal ile gitmesini istediğim konumu yüzünün bakacağı yön ile veririm.
