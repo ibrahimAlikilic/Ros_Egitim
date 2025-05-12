@@ -7,3 +7,8 @@
 	RViz ortamına baktığımız zaman "Global Status" error veriyor bunu çözmek için "2D Pose Estimate" ile ose veriyoruz ve düzeliyor.
 		Robotum hangi yöne bakıyorsa onu verdim.
 	Nav2 Goal ile gitmesini istediğim konumu yüzünün bakacağı yön ile veririm.
+	
+Birden fazla hedef nokta gönderme :
+	RViz ortamında "Navigation2" barında "Waypoint / Nav Through Poses Mode" var ona tıkla . Ardından "Nav2 Goal" ile gitmek istediğin noktaları seç.
+	Sonrasında ""Navigation2" barında yazan "Start Waypoint Following"e tıkla ve robot harekete geçsin.
+		Oluşan kırmızı çizgi benim global güzergaım , mavi ise local güzregahım . 
