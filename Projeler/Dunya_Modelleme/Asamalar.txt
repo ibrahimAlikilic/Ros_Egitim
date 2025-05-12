@@ -6,7 +6,7 @@
 2) Gazbo ortamını başlatıp oluşturduğun dünyayı çağırabilirsin.
 
 Oluşturduğumuz dünyaya turtlebot3 spun etme. Bunun için turtlebot3 ün launch dosyalarıne erişmemiz ve bunların üzerinde bazı değişiklikler yapmamız lazım.
-1) "https://github.com/ROBOTIS-GIT/turtlebot3_simulations" sayfasına git.
+1) "https://github.com/ROBOTIS-GIT/turtlebot3_simulations" sayfasına git. Bu eksik bunun yanına başka bir yere "https://github.com/ROBOTIS-GIT/turtlebot3" de klonla.
 2) Bu repoyu klanlayacağın ws oluştur ve oraya klonla.
 3) biz ros'un humble olarak kullanıyoruz ve indirdiğimiz reponun buna uygunluğunu kontrol etme için : "git checkout humble-devel" komutunu kullanıyoruz.
 4) "git branch" diyoruz ve humble-devel brunch'ına geçmiş olduğumuzu görüyoruz.

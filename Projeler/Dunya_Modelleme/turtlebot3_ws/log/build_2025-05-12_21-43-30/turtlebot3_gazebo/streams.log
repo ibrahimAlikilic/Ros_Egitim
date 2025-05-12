@@ -1,0 +1,5 @@
+[0.224s] Invoking command in '/home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/ros2_ws/install/simple_py_pkg:/home/ibrahim/Ros_Egitim/Projeler/Turtlesim_Hedef_Konuma_Git/turtlesim_ws/install/turtlesim_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/build/turtlebot3_gazebo -- -j16 -l16
+[0.275s] [ 25%] Built target turtlebot3_drive
+[0.287s] [100%] Built target obstacles
+[0.287s] [100%] Built target obstacle2
+[0.287s] [100%] Built target obstacle1

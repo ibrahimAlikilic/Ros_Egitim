@@ -1,0 +1,4 @@
+[0.224s] Invoking command in '/home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/build/turtlebot3_navigation2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/ros2_ws/install/simple_py_pkg:/home/ibrahim/Ros_Egitim/Projeler/Turtlesim_Hedef_Konuma_Git/turtlesim_ws/install/turtlesim_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/build/turtlebot3_navigation2 -- -j16 -l16
+[0.236s] [0mCMake Error: The source directory "/home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/src/yanina/turtlebot3/turtlebot3_navigation2" does not exist.
+[0.237s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.237s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1

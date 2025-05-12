@@ -1,0 +1,37 @@
+[0.010s] Invoking command in '/home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/ros2_ws/install/simple_py_pkg:/home/ibrahim/Ros_Egitim/Projeler/Turtlesim_Hedef_Konuma_Git/turtlesim_ws/install/turtlesim_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/build/turtlebot3_gazebo -- -j16 -l16
+[0.047s] [35m[1mConsolidate compiler generated dependencies of target turtlebot3_drive[0m
+[0.048s] [35m[1mConsolidate compiler generated dependencies of target obstacle1[0m
+[0.048s] [35m[1mConsolidate compiler generated dependencies of target obstacle2[0m
+[0.048s] [35m[1mConsolidate compiler generated dependencies of target obstacles[0m
+[0.062s] [ 25%] Built target turtlebot3_drive
+[0.080s] [100%] Built target obstacle2
+[0.081s] [100%] Built target obstacles
+[0.081s] [100%] Built target obstacle1
+[0.106s] Invoked command in '/home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/build/turtlebot3_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/ros2_ws/install/simple_py_pkg:/home/ibrahim/Ros_Egitim/Projeler/Turtlesim_Hedef_Konuma_Git/turtlesim_ws/install/turtlesim_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/build/turtlebot3_gazebo -- -j16 -l16
+[0.107s] Invoking command in '/home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/ros2_ws/install/simple_py_pkg:/home/ibrahim/Ros_Egitim/Projeler/Turtlesim_Hedef_Konuma_Git/turtlesim_ws/install/turtlesim_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/build/turtlebot3_gazebo
+[0.114s] -- Install configuration: ""
+[0.114s] -- Up-to-date: /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch
+[0.114s] -- Up-to-date: /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/.vscode
+[0.114s] -- Up-to-date: /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models
+[0.114s] -- Up-to-date: /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world
+[0.114s] -- Up-to-date: /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle1
+[0.114s] -- Up-to-date: /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/inner_walls
+[0.114s] -- Up-to-date: /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle2
+[0.114s] -- Up-to-date: /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle_plugin
+[0.114s] -- Up-to-date: /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/goal_box
+[0.115s] -- Up-to-date: /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacles
+[0.115s] -- Up-to-date: /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_common
+[0.115s] -- Up-to-date: /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_common/meshes
+[0.115s] -- Up-to-date: /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle_pi
+[0.115s] -- Up-to-date: /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle
+[0.115s] -- Up-to-date: /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_world
+[0.115s] -- Up-to-date: /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_world/meshes
+[0.115s] -- Up-to-date: /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_house
+[0.115s] -- Up-to-date: /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger
+[0.115s] -- Up-to-date: /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//rviz
+[0.115s] -- Up-to-date: /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//urdf
+[0.115s] -- Up-to-date: /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds
+[0.115s] -- Up-to-date: /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/include/
+[0.115s] -- Up-to-date: /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/include//turtlebot3_gazebo
+[0.115s] -- Installing: /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo/package.dsv
+[0.117s] Invoked command in '/home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/build/turtlebot3_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ibrahim/ros2_ws/install/simple_py_pkg:/home/ibrahim/Ros_Egitim/Projeler/Turtlesim_Hedef_Konuma_Git/turtlesim_ws/install/turtlesim_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/build/turtlebot3_gazebo

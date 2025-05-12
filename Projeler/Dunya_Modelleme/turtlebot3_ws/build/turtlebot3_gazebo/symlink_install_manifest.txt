@@ -10,6 +10,7 @@
 /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_dqn_stage4.launch.py
 /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_house.launch.py
 /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_maze_world.launch.py
+/home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_my_house_world.launch.py
 /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_world.launch.py
 /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger/model-1_4.sdf
 /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger/model.config
@@ -57,6 +58,7 @@
 /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//urdf/turtlebot3_waffle_pi.urdf
 /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/empty_world.world
 /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/maze.world
+/home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/my_house.world
 /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage1.world
 /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage2.world
 /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_dqn_stage3.world

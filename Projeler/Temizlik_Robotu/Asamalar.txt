@@ -1,0 +1,30 @@
+Home floor plan : https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.allinfohome.com%2Fhouse-design%2F25-sqm-house-design&psig=AOvVaw00HNNEOlhBiX4bHgZivBCL&ust=1747150050292000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMDwnKqfno0DFQAAAAAdAAAAABAE
+
+A) Haritalandırma
+	1) Ana dizinde "gazebo" başlat. 
+		Edit -> Building Editor -> import
+			Kapıyı 1 metre olarka boyutladım. Ardından çiz.
+				Önce tüm duvarları bütün çiz ondan sonra silme ve kapı pencere eklemelerini gerçekleştir.
+				".sdf" ve ".config" dosyalarım oluştu.
+B)
+	1) Gazebo terminalden aç ve çizimimizi insert et.
+		Ve insert kısmında bulunan nesnelerle evi düz.
+			Eklemeleri yaptıktan sonra "save world as" de ve ".world" olarak kaydet ( Ana dizine kaydetmen lazım.). 
+
+Not : "gazebo dunya_adi" ile oluşturduğun dünyayı direk gazebo ortamında başlatabilirsin.
+
+
+C) Oluşturduğumuz haritaya robot ekleyelim :
+	1) Önceden oluşturmuş olduğumuz "/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/src/turtlebot3_gazebo/worlds" dizinine yeni oluşturmuş olduğumuz world'ü taşıyalım :
+		Ana dizinde "mv my_house.world /home/ibrahim/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/src/turtlebot3_gazebo/worlds" ile istediğimiz dizine taşıyalım.
+	2) Şimdi bizim "/Ros_Egitim/Projeler/Dunya_Modelleme/turtlebot3_ws/src/turtlebot3_gazebo/launch" dizininde kullandığımız "turtlebot3_maze_world.launch.py" dosyamız vardı yeni dünyammızda da kullanmak için kopyalayalım : "cp turtlebot3_maze_world.launch.py turtlebot3_my_house_world.launch.py"
+		Ardından "gedit" ile dosyayı aç
+			Burada world'ü değiştir.
+	3) Build ve source gerçekleştir.
+		Ardından çalıştır : "ros2 launch turtlebot3_gazebo turtlebot3_my_house_world.launch.py"
+		
+		Şimdi de cartographer ile haritalandırmamızı gerçekleştirelim.
+			gazebo açıkken yeni terminalden ( Ana dizinde ): "ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:=True" ile başlat.
+		Teleopkey başlat ve gez : "ros2 run turtlebot3_teleop teleop_keyboard"
+		Ardından kayıt işlemi gerçekleştireceğz :  "ros2 run nav2_map_server map_saver_cli -f kaydedilecek_dizin_ve_adi" orn : Deskopt/my_house
+		Sonrasında "gimp" ile düzenleyelim. Ve kaydedip düzenlemiş olduğumuzu kullanalım.  
